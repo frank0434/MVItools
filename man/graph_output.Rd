@@ -25,7 +25,6 @@ graph_output(markered_graphs = ll,
              output_foler = "markered",
              sitename = "Tayler")
 }
-
 }
 \seealso{
 Other water_markers: \code{\link{graph_info}},

@@ -18,6 +18,7 @@
 #' graph_info(list = images,
 #'            logo_path = "../../")
 #' }
+#' @export
 
 graph_info <- function(list, logo_path){
 

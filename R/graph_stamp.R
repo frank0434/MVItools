@@ -24,6 +24,8 @@
 #'                    logo_info = ll,
 #'                    logo = logo)
 #' }
+#' @export
+
 graph_stamp <- function(graphs, logo_info, logo){
 
   l <- purrr::map2(graphs, logo_info, function(.x, .y){

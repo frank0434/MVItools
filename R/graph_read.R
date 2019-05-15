@@ -24,6 +24,7 @@
 #'            recursive = TRUE,
 #'            full.names = TRUE)
 #' }
+#' @export
 graph_read <- function(sitename = "Tayler", data_source, extension = "*.jpeg$", recursive = TRUE, full.names = TRUE ){
   l <- list.files(paste0(data_source, "/", sitename), pattern = tolower(extension), recursive = recursive, full.names = full.names)
   ll <- sapply(l, function(x){

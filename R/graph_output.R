@@ -19,7 +19,7 @@
 #'              output_foler = "markered",
 #'              sitename = "Tayler")
 #'}
-#'
+#' @export
 graph_output <- function(markered_graphs, output_foler, sitename){
   lapply(names(markered_graphs), function(x){
     name_raw <- regmatches(x,regexpr(paste0(sitename,".*[^\\.jpeg]"), x))

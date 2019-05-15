@@ -19,6 +19,7 @@
 #' manage_dir(data_souce = "/Analysis/IndividualSiteOutputs/",
 #'            output_loc = "marked_graphes")
 #' }
+#' @export
 manage_dir <- function(data_source = "./", output_loc = "markered"){
 
 
