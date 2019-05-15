@@ -4,12 +4,12 @@
 \alias{graph_info}
 \title{graph_info}
 \usage{
-graph_info(list, logo_path)
+graph_info(list, logo)
 }
 \arguments{
 \item{list}{A list object that keep all the}
 
-\item{logo_path}{the path for logo image}
+\item{logo}{the magick image object of the logo}
 }
 \value{
 A list has position coordinates for stampping the logo.
