@@ -1,0 +1,64 @@
+---
+title: "Use MVItools"
+author: "Jian Liu"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Use_MVItools}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MVItools)
+```
+
+## Creat directories
+
+```{r house keeping, eval=FALSE}
+manage_dir("./Analysis/IndividualSiteOutputs/", output_loc = "markered")
+
+```
+
+## Load components
+
+### Load the images are needed to be markered. 
+
+```{r load target, eval=FALSE}
+l <- graph_read(data_source = "./Analysis/IndividualSiteOutputs/",sitename = "Dakins")
+```
+
+### Load logo
+
+```{r load logo, eval=FALSE}
+logo <- magick::image_read("./playground/PFR-web.jpg",)
+```
+
+### Process logo 
+
+```{r Process logo, eval=FALSE}
+logo_info <- graph_info(l, "./playground/PFR-web.jpg")
+adj_color <-  magick::image_colorize(logo, 60 ,"white")
+transparent <-   magick::image_transparent(adj_color, "white", fuzz = 10)
+```
+
+### Stampping
+
+```{r Stampping, eval=FALSE}
+markered <- graph_stamp(l,logo_info, transparent)
+remove(l)
+```
+
+### Output 
+
+```{r Output, eval=FALSE}
+graph_output(markered, output_foler = "markered",sitename = "Dakins")
+```
+

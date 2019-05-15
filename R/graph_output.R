@@ -28,6 +28,8 @@ graph_output <- function(markered_graphs, output_foler, sitename){
     dir_check2 <- dir.exists(here::here(output_foler,sitename,sep, folderstr[[2]]))
     if(dir_check2 == FALSE) dir.create(here::here(output_foler, sitename,sep, folderstr[[2]]),recursive = TRUE)
 
+    cat("Outputting", name_raw, "\r\n")
+
     #output
     magick::image_write(image =  markered_graphs[[x]], path = file.path(here::here(output_foler, paste0(sitename,sep, folderstr[[2]],sep,folderstr[[3]],".png"))), format = "png")
 
