@@ -1,5 +1,6 @@
 
 
+
 #' graph_stamp
 #'
 #' Compsite graph with PFR logo.
@@ -18,7 +19,11 @@
 #' purrr
 #'
 #' @examples
-#' lll <- graph_stamp(graphs = l,logo_info = ll, logo = logo)
+#' \dontrun{
+#' lll <- graph_stamp(graphs = l,
+#'                    logo_info = ll,
+#'                    logo = logo)
+#' }
 graph_stamp <- function(graphs, logo_info, logo){
 
   l <- purrr::map2(graphs, logo_info, function(.x, .y){

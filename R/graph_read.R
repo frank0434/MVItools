@@ -6,7 +6,7 @@
 #'
 #' @param sitename farm name
 #' @param data_source path to the folder holds all sites
-#' @param pattern regular expression for image entension
+#' @param extension image file entension
 #' @param recursive TURE, look depth into subfolder; FALSE, only one level
 #' @param full.names TURE, default, show the full path for image; FALSE, not recommend, show relative path only
 #'
@@ -17,7 +17,13 @@
 #' magick
 #'
 #' @examples
-#' graph_read(data_source, pattern = "*.jpeg$", recursive = TRUE, full.names = TRUE)
+#' \dontrun{
+#' graph_read(sitename = "Tayler",
+#'            data_source,
+#'            extension = "*.jpeg$",
+#'            recursive = TRUE,
+#'            full.names = TRUE)
+#' }
 graph_read <- function(sitename = "Tayler", data_source, extension = "*.jpeg$", recursive = TRUE, full.names = TRUE ){
   l <- list.files(paste0(data_source, "/", sitename), pattern = tolower(extension), recursive = recursive, full.names = full.names)
   ll <- sapply(l, function(x){

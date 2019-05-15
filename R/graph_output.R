@@ -14,7 +14,11 @@
 #' here
 #'
 #' @examples
-#' graph_output(markered_graphs = ll, output_foler = "markered", sitename = "Tayler")
+#' \dontrun{
+#' graph_output(markered_graphs = ll,
+#'              output_foler = "markered",
+#'              sitename = "Tayler")
+#'}
 #'
 graph_output <- function(markered_graphs, output_foler, sitename){
   lapply(names(markered_graphs), function(x){

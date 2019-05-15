@@ -4,7 +4,7 @@
 #' Grab width and height of the image. Use these to calculate offset positions for x and y axis to stamp the logo.
 #'
 #' @param list A list object that keep all the
-#' @param logo the path for logo image
+#' @param logo_path the path for logo image
 #'
 #' @return A list has position coordinates for stampping the logo.
 #'
@@ -14,12 +14,15 @@
 #' magick
 #'
 #' @examples
-#' graph_info(list = images, logo_path = "../../")
+#' \dontrun{
+#' graph_info(list = images,
+#'            logo_path = "../../")
+#' }
 
 graph_info <- function(list, logo_path){
 
   logo <- magick::image_read(logo_path)
-  assign(x = "logo", value = logo, envir = .GlobalEnv)
+
   logo_info <- magick::image_info(logo)
 
   l <- lapply(list, function(img){

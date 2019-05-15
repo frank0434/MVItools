@@ -5,7 +5,6 @@
 #'
 #' House keeping work.
 #'
-#' @param sitename Not working yet. need to consider the analysis part and then add the sitenmae into functionality
 #' @param data_source source of data
 #' @param output_loc output location
 #'
@@ -16,7 +15,10 @@
 #' here
 #'
 #' @examples
-#' manage_dir(data_souce = "/Analysis/IndividualSiteOutputs/", output_loc = "marked_graphes")
+#' \dontrun{
+#' manage_dir(data_souce = "/Analysis/IndividualSiteOutputs/",
+#'            output_loc = "marked_graphes")
+#' }
 manage_dir <- function(data_source = "./", output_loc = "markered"){
 
 
